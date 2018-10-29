@@ -1,0 +1,9 @@
+<Project>
+  <Target Name="SayByeAfterGreet" AfterTargets="Greet">
+    <CallTarget Targets="SayBye" />
+  </Target>
+
+  <Target Name="SayBye">
+    <Message Text="Bye!" Importance="high" />
+  </Target>
+</Project>

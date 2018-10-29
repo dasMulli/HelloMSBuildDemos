@@ -1,0 +1,12 @@
+<Project>
+
+  <ItemGroup>
+    <Person Include="Martin" Age="28" />
+    <Person Include="John" Age="15" />
+    <Person Include="Chrstina" Age="28" />
+  </ItemGroup>
+
+  <Target Name="GreetByAge">
+    <Message Text="%(Person.Age): Hello @(Person, ', ')!" Importance="high" />
+  </Target>
+</Project>

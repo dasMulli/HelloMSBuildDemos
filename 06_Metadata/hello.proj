@@ -1,0 +1,17 @@
+<Project>
+
+  <ItemDefinitionGroup>
+    <Person>
+      <Greeting>Hello %(Identity)!</Greeting>
+    </Person>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <Person Include="Martin;Chrstina" />
+    <Person Include="John" Greeting="Hey Johnny!" />
+  </ItemGroup>
+
+  <Target Name="Greet">
+    <Message Text="%(Person.Greeting)" Importance="high" />
+  </Target>
+</Project>

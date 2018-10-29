@@ -1,0 +1,14 @@
+<Project>
+
+  <!--
+  Properties are just named strings you can use to store information
+  Properties can be overwritten, modified etc.
+  -->
+  <PropertyGroup>
+    <Greeting>Hello MSBuild!</Greeting>
+  </PropertyGroup>
+
+  <Target Name="Greet">
+    <Message Text="$(Greeting)" Importance="high" />
+  </Target>
+</Project>

@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>
+    <Greeting>Hello $(Person)!</Greeting>
+  </PropertyGroup>
+
+  <Target Name="Greet">
+    <Message Text="$(Greeting)" Importance="high" />
+  </Target>
+</Project>

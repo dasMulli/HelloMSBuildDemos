@@ -1,0 +1,42 @@
+<!--
+Any <Project/> XML file can be an MSBuild project.
+
+Optional in MSBuild 15 / VS 2017:
+XML declaration - <?xml>
+Namespace declaration
+ToolsVersion
+-->
+<Project>
+  <!--
+  Here is some room for things to go, not just targets
+  -->
+
+  <!-- Targets contain and control all build logic -->
+  <Target Name="Greet">
+    <!-- Here you can use tasks  -->
+    <Message Text="Hello MSBuild!" Importance="high" />
+
+    <!-- 
+    Useful Built-in tasks are:
+    
+    Exec
+    
+    ZipDirectory
+    Unzip
+    DownloadFile
+    
+    WriteLinesToFile
+    ReadLinesFromFile
+    
+    XmlPeek
+    XmlPoke
+    XslTransformation
+
+    Warning
+    Error
+
+    MSBuild
+
+    -->
+  </Target>
+</Project>

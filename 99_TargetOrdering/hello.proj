@@ -1,0 +1,21 @@
+<Project DefaultTargets="MainTarget">
+
+  <Target Name="SetMainTargetConditionProp">
+    <Message Text="Inside a dependency of Main Target" Importance="high" />
+    <PropertyGroup>
+      <SkipMainTarget>true</SkipMainTarget>
+    </PropertyGroup>
+  </Target>
+
+  <Target Name="MainTarget" DependsOnTargets="SetMainTargetConditionProp" Condition="'$(SkipMainTarget)' != 'true'">
+    <Message Text="Inside Main Target" Importance="high" />
+  </Target>
+
+  <Target Name="MainTargetExtension" BeforeTargets="MainTarget">
+    <Message Text="Before Main Target" Importance="high" />
+  </Target>
+
+</Project>
+
+
+

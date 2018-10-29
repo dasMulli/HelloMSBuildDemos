@@ -1,0 +1,50 @@
+<Project DefaultTargets="Greet">
+
+  <Target Name="Greet" DependsOnTargets="PrepareGreeting" >
+    <Message Text="$(Greeting)" Importance="high" />
+  </Target>
+
+  <Target Name="PrepareGreeting">
+    <PropertyGroup>
+      <Greeting>Hello World!</Greeting>
+    </PropertyGroup>
+  </Target>
+
+  <Import Project="bye.targets" />
+
+</Project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+  <Target Name="Greet" DependsOnTargets="PrepareGreeting" >
+    <Message Text="$(Greeting)" Importance="high" />
+  </Target>
+
+  <PropertyGroup>
+    <GreetDependsOn>$(GreetDependsOn);PrepareGreeting</GreetDependsOn>
+  </PropertyGroup>
+
+  <Target Name="Greet" DependsOnTargets="$(GreetDependsOn)" >
+    <Message Text="$(Greeting)" Importance="high" />
+  </Target>
+
+-->
+
+
+
+
+
